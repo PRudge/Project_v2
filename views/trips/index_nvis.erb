@@ -15,7 +15,7 @@
            <%@sights.each do |sight|%>
 
              <%if city.id == sight.city_id%>
-               <h4><%=sight.name%></h4>
+               <h4><%=sight.name%>: "<%=sight.comments%>"</h4>
              <%end%>
 
           <%end%>

@@ -1,10 +1,10 @@
-<h6><a href='/countries'>back to countries</a></h6>
+<h6><a href=/trips/all>all trips</a><<<a href='/countries'>all countries</a></h6>
 
 <h2><%= @country.format_name %> Trips and Destinations</h2>
   <% @country.cities.each do |city| %>
     <ul id = "city">
         <li><a class = "city_name" href="/sights/<%= city.id %>"><%= city.format_name %></a>
-          -<a href="/cities/<%= city.id %>/edit">Edit</a>
+          -<a href="/cities/<%= city.id %>/edit"> Edit</a>
 
         <form action="/cities/<%= city.id %>/delete"
           method="POST"><input type="submit" value="Delete"></form></li>

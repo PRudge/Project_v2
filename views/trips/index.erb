@@ -16,12 +16,19 @@
            <%else%>
              <%visit_code = "  still to see"%>
            <%end%>
-           <li><h3><%=city.name%></h3><a class = "visit_status" href="/cities/<%= city.id %>/edit_all"><h6><%=visit_code%></h6></a></li>
+           <li><h3><a href="/sights/<%= city.id %>">   <%=city.name%></h3></a>
+           <a class = "visit_status" href="/cities/<%= city.id %>/edit_all">
+           <h6><%=visit_code%></h6></a></li>
            <%@sights.each do |sight|%>
 
-             <%if city.id == sight.city_id%>
+           <%if city.id == sight.city_id%>
+             <%if sight.comments != ""%>
+               <h4><%=sight.name%>: "<%=sight.comments%>"</h4>
+             <%else%>
                <h4><%=sight.name%></h4>
-             <%end%>
+            <%end%>
+
+           <%end%>
 
           <%end%>
 
