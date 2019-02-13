@@ -78,11 +78,12 @@ letter-spacing: 1px;
 }
 
 #places h2 {
-	color: #751636;
+	color: #751636 !important;
 	font-size: 25px;
   border-bottom: 1px solid #000;
   margin-top:20px;
 }
+
 
 #places h3 {
 	color: black;
@@ -91,13 +92,14 @@ letter-spacing: 1px;
 }
 
 #places a {
-	color:#605436;
+	color:#751636;
 	margin-top:15px;
 	text-decoration: none;
 	font_weight: bold;
-	font-size:25px;
+	font-size:20px;
 	display: inline;
 }
+
 #places h4 {
 	font-size:15px;
 }
@@ -136,7 +138,8 @@ h6{
 
 #country a {
   text-decoration: none;
-	color:#605436;
+	/* color:#605436; */
+	color: #751636;
 }
 
 .country_name{font-size:20px;
@@ -160,7 +163,7 @@ margin: 5px;}
 
 #city a {
   text-decoration: none;
-	color:#605436;
+	color: #751636;
 }
 
 .city_name{font-size:20px;
@@ -187,7 +190,7 @@ margin: 5px;}
 
 #sight a {
   text-decoration: none;
-	color:#605436;
+  color: #751636;
 	display: inline;
 }
 

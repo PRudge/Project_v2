@@ -6,9 +6,9 @@
     <%@countries.each do|country|%>
 
       <%if Country.cities_visited(country.id).length != 0%>
-        <h2><%=country.name%></h2>
+          <h2><a href="/cities/<%= country.id %>"> <%= country.format_name %></a></h2>
 
-       <%@cities.each do |city|%>
+         <%@cities.each do |city|%>
 
          <%if city.country_id == country.id%>
          <%if city.visit_status == 0%>
@@ -16,7 +16,7 @@
          <%else%>
            <%visit_code = "  still to see"%>
          <%end%>
-         <li><h3><a href="/sights/<%= city.id %>">   <%=city.name%></h3></a>
+         <li><h3><a href="/sights/<%= city.id %>"><%=city.format_name%></a></h3>
          <a class = "visit_status" href="/cities/<%= city.id %>/edit_all">
          <h6><%=visit_code%></h6></a></li>
 
