@@ -11,12 +11,12 @@
        <%@cities.each do |city|%>
 
          <%if city.country_id == country.id%>
-           <%if visit_status == 0%>
+           <%if city.visit_status == 0%>
              <%visit_code = "  visited"%>
            <%else%>
              <%visit_code = "  still to see"%>
            <%end%>
-           <li><a href="/cities/<%= city.id %>/edit_all"><%=city.name%></a><h6>visited</h6></li>
+           <li><a href="/cities/<%= city.id %>/edit_all"><%=city.name%></a><h6><%=visit_code%></h6></li>
            <%@sights.each do |sight|%>
 
              <%if city.id == sight.city_id%>
