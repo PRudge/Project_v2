@@ -82,22 +82,33 @@ letter-spacing: 1px;
 }
 
 #places h1 {
-	font-size:35px;
+	font-size: 25px;
 }
 
 #places h2 {
-	font-size:30px;
+	color: #751636;
+	font-size: 25px;
   border-bottom: 1px solid #000;
-  margin-top:40px;
+  margin-top:20px;
 }
-#places h3 {
-	margin-top:20px;
+#places a {
+	color:#605436;
+	margin-top:15px;
+	text-decoration: none;
+	font_weight: bold;
 	font-size:25px;
-
+	display: inline;
 }
 #places h4 {
-	font-size:20px;
+	font-size:15px;
 }
+
+h6{
+	text-decoration: none;
+	font-style: italic;
+	color: #751636;
+	display: inline;
+  }
 
 #trip_wrapper{
   display: grid;
@@ -183,11 +194,10 @@ footer{
 /* Horizontal menu layout */
 nav {
   grid-area: 2 / 2 / 3 / 3;
-  font-family: futura;
+
   font-size: 15px;
   list-style: none;
-  /* font-weight: bold; */
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #605436;
   text-align: center;
   color: #605436;
   display: block;
@@ -301,10 +311,10 @@ select{
 .form-style-1 input[type=email]:focus,
 .form-style-1 textarea:focus,
 .form-style-1 select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
+	-moz-box-shadow: 0 0 8px #605436;
+	-webkit-box-shadow: 0 0 8px #605436;
+	box-shadow: 0 0 8px #605436;
+	border: 1px solid #605436;
 }
 .form-style-1 .field-divided{
 	width: 49%;
@@ -321,13 +331,13 @@ select{
   width: 50%
 }
 .form-style-1 input[type=submit], .form-style-1 input[type=button]{
-	background: #4B99AD;
+	background: #751636;
 	padding: 8px 15px 8px 15px;
 	border: none;
 	color: #fff;
 }
 .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-	background: #4691A4;
+	background: #d0ab95;
 	box-shadow:none;
 	-moz-box-shadow:none;
 	-webkit-box-shadow:none;
