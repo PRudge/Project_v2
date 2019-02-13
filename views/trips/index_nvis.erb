@@ -1,0 +1,34 @@
+<a href="/countries" class="button">Edit/Add Trips</a>
+
+<h1><%=@title%><h1>
+  <ul id = "places">
+
+    <%@countries.each do|country|%>
+
+      <%if Country.cities_not_visited(country.id).length != 0%>
+        <h2><%=country.name%></h2>
+
+       <%@cities.each do |city|%>
+
+         <%if city.country_id == country.id%>
+           <li><a href="/cities/<%= city.id %>/edit_all"><%=city.name%></a></li>
+           <%@sights.each do |sight|%>
+
+             <%if city.id == sight.city_id%>
+               <h4><%=sight.name%></h4>
+             <%end%>
+
+          <%end%>
+
+        <%end%>
+
+     <%end%>
+
+  <%end%>
+
+<%end%>
+
+
+
+
+  </ul>

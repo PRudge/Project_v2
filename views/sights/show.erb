@@ -1,0 +1,15 @@
+<h6><a href='/countries'>all countries</a><<
+<a href ='/cities/<%= @country.id %>'>back to <%= @country.name %> </a>
+</h6>
+
+<h2>The Sights of <%= @city.format_name %>, <%= @country.name %></h2>
+    <% @sights.each do |sight| %>
+      <ul>
+        <li><%= sight.format_name %></li>
+          <li>Comments:<%= sight.comments %></li>
+        <li><a href="/sights/<%= sight.id %>/edit">Edit</a>
+
+        <form class = "form-style-1" action="/sights/<%= sight.id %>/delete" method="POST"><input type="submit" value="Delete"></form></li>
+      </ul>
+  <% end %>
+  <a href="/sights/new/<%= @city.id %>" class="button">Add a sight</a>

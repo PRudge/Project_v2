@@ -1,0 +1,16 @@
+<h2>Edit <%= @sight.name %></h2>
+
+<form class = "form-style-1" method="POST" action="/sights/<%= @sight.id %>">
+
+  <input type="hidden" name="city_id" id="city_id" value= "<%= @sight.city_id%>"/>
+
+  <label for="name">Sight Name:</label>
+  <input type="text" name="name" id="name" value="<%= @sight.name %>"/>
+  <li><label for="comments">Comments:</label>
+  <textarea name="comments" id = "comments" class="field-long field-textarea" name = "<%= @sight.comments%>">
+    <%= @sight.comments%>
+  </textarea></li>
+
+
+  <input type="submit" value="Update Sight Details"/>
+</form>

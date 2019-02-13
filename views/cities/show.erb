@@ -1,0 +1,13 @@
+<h6><a href='/countries'>back to countries</a></h6>
+
+<h2><%= @country.format_name %> Trips and Destinations</h2>
+  <% @country.cities.each do |city| %>
+    <ul id = "city">
+        <li><a class = "city_name" href="/sights/<%= city.id %>"><%= city.format_name %></a>
+          -<a href="/cities/<%= city.id %>/edit">Edit</a></li>
+
+        <form action="/cities/<%= city.id %>/delete"
+          method="POST"><input type="submit" value="Delete"></form></li>
+     </ul>
+  <% end %>
+<a href="/cities/new/<%= @country.id %>" class="button">Add a city</a>
