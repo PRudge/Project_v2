@@ -11,7 +11,10 @@ get '/sights/new/:id' do #form for new sight
 end
 
 post '/sights' do #add a new sight (for a city in a country
-  Sight.new(params).save
+  sight = Sight.new(params)
+  if sight.name != ""
+    Sight.new(params).save
+  end
   redirect to "/sights/#{params['city_id']}"
 end
 
