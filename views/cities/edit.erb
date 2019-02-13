@@ -10,7 +10,7 @@
 
   <label for="name">City Name:</label>
   <input type="text" name="name" id="name" value="<%= @city.name %>"/>
-
+<fieldset data-role="controlgroup" data-type="horizontal" >
   <% if @city.visit_status.to_i == 0 %>
   <input type="radio" id="visited" name="visit_status" value=0 checked>
     <label for="visited">Visited</label>
@@ -22,6 +22,7 @@
     <input type="radio" id="to_visit" name="visit_status" value=1 checked>
     <label for="to_visit">Still To See</label>
   <% end %>
+</fieldset>
 
   <input type="submit" value="Update City Details"/>
 </form>

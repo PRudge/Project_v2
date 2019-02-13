@@ -9,12 +9,6 @@ body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 14px;
 	color:#605436;
-
-  /* background: url(/images/trips_olde_world_v2.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
 }
 
 .button {
@@ -22,7 +16,6 @@ body {
 	color: #605436;
   padding: 15px 32px;
   text-align: center;
-  /* text-decoration: none; */
   display: inline-block;
   font-size: 14px;
 }
@@ -47,7 +40,6 @@ a {
   display: grid;
   grid-template-columns: 2fr  5fr  2fr;
   grid-template-rows: auto auto auto;
-
   width: 100%;
   box-shadow: 0 0 15px 15px rgba(200,200,200,.14);
 }
@@ -91,6 +83,13 @@ letter-spacing: 1px;
   border-bottom: 1px solid #000;
   margin-top:20px;
 }
+
+#places h3 {
+	color: black;
+	font-size: 20px;
+	display:inline;
+}
+
 #places a {
 	color:#605436;
 	margin-top:15px;
@@ -159,6 +158,12 @@ margin: 5px;}
 .city_name{font-size:20px;
 padding: 5px;
 margin: 5px;}
+
+.visit_status{
+	text-decoration: none;
+  font-style: italic;
+  color: #751636;
+  display: inline;}
 
 .details{
   grid-column: auto;
@@ -316,6 +321,36 @@ select{
 	box-shadow: 0 0 8px #605436;
 	border: 1px solid #605436;
 }
+
+.form-style-1 input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+.form-style-1 input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #751636;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+
+
 .form-style-1 .field-divided{
 	width: 49%;
 }

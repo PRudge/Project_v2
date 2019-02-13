@@ -11,7 +11,10 @@ get '/cities/new/:id' do #form for new city
 end
 
 post '/cities' do #add a new city (to a specific country)
-  City.new(params).save
+  city = City.new(params)
+  if city.name != ""
+    City.new(params).save
+  end
   redirect to "/cities/#{params['country_id']}"
 end
 

@@ -16,8 +16,13 @@ get '/countries/new' do #form for a new country
 end
 
 post '/countries' do #input a new country
-  id = Country.new(params).save
-  redirect to "/cities/new/#{id}"
+  country = Country.new(params)
+  if country.name != ""
+    id = Country.new(params).save
+    redirect to "/cities/new/#{id}"
+  else
+    redirect to "/countries"
+  end
 end
 
 get '/countries/:id/edit' do #edit city info
