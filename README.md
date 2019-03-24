@@ -2,20 +2,50 @@
 
 myBucketList allows the user to create trips taken and still to be taken (visited/still to see). The user can choose to add, update or view a trips incorporating a  country, city and sights within a city. Cities and sights can be deleted and the country will be automatically deleted on deletion of last city for that country.
 
-## SETUP
+## Getting Started
 
-To install sinatra: `gem install sinatra sinatra-contrib`
+These instructions will enable you to run a copy of the project on your local machine
 
-To install psql visit: `https://www.postgresql.org/download/macosx/`
+### Installing
 
-Run : `psql -d bucketlist -f db/bucketlist.sql`
+To install sinatra: 
 
-Seed the database: `ruby db/seeds.rb`
+```
+gem install sinatra sinatra-contrib
+```
 
-Run the app: `ruby controller.rb`
+To install psql visit:
+
+``` 
+https://www.postgresql.org/download/macosx/
+```
+
+Use database: bucketlist and run bucketlist.sql to drop and create countries/cities and sights tables
+
+Run : 
+
+```
+psql -d bucketlist -f db/bucketlist.sql
+```
+
+Seed the database: 
+
+```
+ruby db/seeds.rb
+```
+
+Run the app: 
+
+```
+ruby controller.rb
+```
 
 
-Go to: `http://localhost:4567`.
+### Using
 
+The application is running on port 4567 so visit http://localhost:4567.
+
+
+#### Screenshot of myBucketList
 ![Image of the app](images/myBucketList_screen_shot.jpg
 )
