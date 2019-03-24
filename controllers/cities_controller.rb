@@ -13,6 +13,7 @@ end
 post '/cities' do #add a new city (to a specific country)
   city = City.new(params)
   if city.name != ""
+    params['name'] = city.format_name
     City.new(params).save
   end
   redirect to "/cities/#{params['country_id']}"
@@ -36,14 +37,20 @@ end
 
 post '/cities/:id/all' do #create a new City object and update cities db
   city = City.new(params)
-  city.update
-  # redirect to "/"
+  city.format_name #Captilize name
+  if city.name != ""
+
+    city.update
+  end
   redirect to "/trips/all"
 end
 
 post '/cities/:id' do #create a new City object and update cities db
   city = City.new(params)
-  city.update
+  city.format_name
+  if city.name != ""
+    city.update
+  end
   # redirect to "/"
   redirect to "/cities/#{params['country_id']}"
 end

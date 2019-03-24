@@ -7,7 +7,7 @@ also_reload('../models/*')
 
 
 get '/trips/visited' do #show all the countries (with links to saved cities)
-  @title = "Trips Taken"
+  @title = "Places Visited"
   @countries = Country.all()
   @cities = City.visited()
   @sights = Sight.all()
@@ -15,7 +15,7 @@ get '/trips/visited' do #show all the countries (with links to saved cities)
 end
 
 get '/trips/tosee' do #show all the countries (with links to saved cities)
-  @title = "Trips Planned"
+  @title = "Still To See"
   @countries = Country.all()
   @cities = City.not_visited()
   @sights = Sight.all()
@@ -23,7 +23,7 @@ get '/trips/tosee' do #show all the countries (with links to saved cities)
 end
 
 get '/trips/all' do #show all the countries (with links to saved cities)
-  @title = "All My Trips"
+  @title = "All Trips"
   @countries = Country.all()
   @cities = City.all()
   @sights = Sight.all()

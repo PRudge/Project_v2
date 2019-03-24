@@ -5,8 +5,7 @@ margin: 0;
 }
 
 body {
-
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 14px;
 	color:#605436;
 }
@@ -41,7 +40,7 @@ a {
   grid-template-columns: 2fr  5fr  2fr;
   grid-template-rows: auto auto auto;
   width: 100%;
-  box-shadow: 0 0 15px 15px rgba(200,200,200,.14);
+  box-shadow: 0 0 15px 15px rgba(200,200,200,.80);
 }
 
 #logo {
@@ -119,9 +118,9 @@ h6{
 
 #trip_wrapper{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
   box-shadow: 0 0 15px 15px rgba(200,200,200,.14);
 }
 
@@ -209,6 +208,22 @@ margin: 5px;}
 
 .details{
   grid-column: auto;
+
+  border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+  border-radius: 25px;
+
+  border: darkgray 2px solid;
+	background-color: white;
+	opacity: 0.7;
+  text-align: left;
+  padding: 50px;
+  margin:10px;
+box-shadow: 0 0 15px 15px rgba(200,200,200,.60);
+
+
+
 }
 
 

@@ -86,14 +86,14 @@ class City
   end
 
   def self.visited()
-    sql = "SELECT * FROM cities WHERE visit_status=0 ORDER BY country_id"
+    sql = "SELECT * FROM cities WHERE visit_status=0 ORDER BY name"
     city_data = SqlRunner.run(sql)
     city = city_data.map { |city| City.new(city) }
     return city
   end
 
   def self.not_visited()
-    sql = "SELECT * FROM cities WHERE visit_status=1 ORDER BY country_id"
+    sql = "SELECT * FROM cities WHERE visit_status=1 ORDER BY name"
     city_data = SqlRunner.run(sql)
     city = city_data.map { |city| City.new(city) }
     return city

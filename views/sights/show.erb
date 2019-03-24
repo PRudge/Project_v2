@@ -2,7 +2,7 @@
 <a href ='/cities/<%= @country.id %>'>back to <%= @country.name %> </a>
 </h6>
 
-<h2>The Sights of <%= @city.format_name %>, <%= @country.name %></h2>
+<h2>The Sights of <%= @city.name %>, <%= @country.name %></h2>
     <% @sights.each do |sight| %>
       <ul id = "sight">
         <li><h2><%= sight.format_name %></h2></li>

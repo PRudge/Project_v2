@@ -2,7 +2,7 @@
 <h2>Edit/Add Trips</h2>
   <% @countries.each do |country| %>
   <ul id = "country">
-    <li> <a class = "country_name" href="/cities/<%= country.id %>"> <%= country.format_name %></a>
+    <li> <a class = "country_name" href="/cities/<%= country.id %>"> <%= country.name %></a>
       - <a href="/countries/<%= country.id %>/edit">Edit</a>
 
     </li>

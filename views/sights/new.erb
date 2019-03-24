@@ -1,4 +1,4 @@
-<h2>Add a sight for <%= @city.format_name %></h2>
+<h2>Add a sight for <%= @city.name %></h2>
 <form class = "form-style-1" method="POST" action="/sights">
   <ul>
     <li><input type="hidden" name="city_id" id="city_id" value="<%= @city.id%>"/></li>

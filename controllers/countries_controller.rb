@@ -17,7 +17,9 @@ end
 
 post '/countries' do #input a new country
   country = Country.new(params)
+  params['name'] = country.format_name
   if country.name != ""
+
     id = Country.new(params).save
     redirect to "/cities/new/#{id}"
   else
@@ -32,7 +34,11 @@ end
 
 post '/countries/:id' do #create a new Country object and update countries db
   country = Country.new(params)
-  country.update
+  params['name'] = country.format_name
+  if country.name != ""
+
+    country.update
+  end
   redirect to "/countries"
 end
 
