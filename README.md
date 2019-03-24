@@ -17,5 +17,5 @@ Run the app: `ruby controller.rb`
 
 Go to: `http://localhost:4567`.
 
-![Image of the app](myBucketList_screen_shot.jpg
+![Image of the app](images/myBucketList_screen_shot.jpg
 )
